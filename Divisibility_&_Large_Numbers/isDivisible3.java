@@ -9,9 +9,7 @@
  * Let us consider 1332, we can write it as
  * 1332 = 1*1000 + 3*100 + 3*10 + 2
  * The proof is based on below observation:
- * Remainder of 10i divided by 3 is 1
- * So powers of 10 only result in value 1.
- * Remainder of 10i divided by 3 is 1
+ * Remainder of 10^i divided by 3 is 1
  * So powers of 10 only result in value 1.
  * Remainder of "1*1000 + 3*100 + 3*10 + 2"
  * divided by 3 can be written as : 
@@ -21,14 +19,14 @@
  * Since 9 is divisible by 3, answer is yes.
  */
 
-class divisible_by_3_or_not{
+class isDivisible3{
 
     static boolean check(String str){
         // Compute sum of digits
         int n = str.length();
         int digitSum = 0;
         for (int i=0; i<n; i++)
-            digitSum += (str.charAt(i)-'0');
+            digitSum += (str.charAt(i) - 48); //Note : The character '0' has an ASCII value of 48
         // Check if sum of digits is 
         // divisible by 3.
         return (digitSum % 3 == 0);
