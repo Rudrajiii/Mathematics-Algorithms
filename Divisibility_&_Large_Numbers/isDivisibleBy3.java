@@ -19,7 +19,7 @@
  * Since 9 is divisible by 3, answer is yes.
  */
 
-class isDivisible3{
+class isDivisibleBy3{
 
     static boolean check(String str){
         // Compute sum of digits
