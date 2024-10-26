@@ -4,7 +4,7 @@ public class lcm_of_array {
     //*LCM -> least common multiple , which is smallest number divisible by both the input numbers */
     /*
      *  Euclidean Algoritm;
-     *  GCD = Func(b , a % b);
+     *  GCD(A , B) = Func(B , A % B);
      *  LCM(A , B) = A * B / GCD(A , B);
      */
     static int _gcd(int a , int b ){
