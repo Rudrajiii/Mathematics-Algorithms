@@ -7,9 +7,30 @@ public class lcm_of_array {
      *  GCD(A , B) = Func(B , A % B);
      *  LCM(A , B) = A * B / GCD(A , B);
      */
+    /*
+     * _gcd(12 , 33)
+     *     Q
+     *   .-------
+     * B | A
+     *   |_______
+     *   |  R     
+     *   |        
+     * Q    A     B    R
+     * 2    33   12    9  //always put the biggest number in divisor segment.
+     *         /     /
+     *        /     /
+     * 1    12     9   3 
+     *           /    /
+     *          /    /
+     * 3      9    3   0
+     *            /   /
+     *           /   /
+     * X        3   0  X //continue untill dividor == 0;
+     * 
+     */
     static int _gcd(int a , int b ){
         if(b == 0)
-            return a;
+            return a; //* HCF or GCD */
         return _gcd(b , a % b);
     }
     static int _lcm(int a , int b){
